@@ -19,11 +19,10 @@
 
         <li v-for="post in posts">
           <img :src="post.author.avatar_url" alt="">
-          <span>
-          {{post.reply_count}}/{{post.visit_count}}
-            </span>
-          <span :class="[{put_good:(post.good==true),put_top:(post.top==true),
-          'topiclist-tab':(post.good!=true&&post.top!=true)}]">
+            <span >
+          {{post.reply_count}}/{{post.visit_count}}</span>
+          <span :class="[{put_good:(post.good===true),put_top:(post.top===true),
+          'topiclist-tab':(post.good!==true&&post.top!==true)}]">
             <span>
               {{post|tabFormatter}}
             </span>
@@ -102,7 +101,6 @@ export default {
   width: 30px;
   vertical-align: middle;
 }
-
 ul {
   list-style: none;
   width: 100%;
@@ -119,7 +117,6 @@ ul li:not(:first-child) {
   color: #333;
   border-top: 1px solid #f0f0f0;
 }
-
 li:not(:first-child):hover {
   background: #f5f5f5;;
 }

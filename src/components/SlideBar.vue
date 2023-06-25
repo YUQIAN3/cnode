@@ -87,7 +87,7 @@ export default {
 
 }
 </script>
-<style>
+<style scoped>
 .authorDetail, .recent_replies, .recent_topics {
   background-color: #fff;
 }

@@ -19,7 +19,7 @@ export default {
   name:'Header'
 }
 </script>
-<style>
+<style scoped>
 .header{
   background-color: #444;
   height:50px;
